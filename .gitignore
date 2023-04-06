@@ -1,0 +1,68 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.user
+*.aps
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+ipch/
+obj/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+_ReSharper*/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+
+# Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# GhostDoc plugin setting file
+GhostDoc.xml
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject file (Help generator for Visual Studio)
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+
+# Click-Once manifests (publishing)
+publish/
+
+# Publish Web Output
+*.Publish.xml
+
+# NuGet Packages Directory
+## TODO: If you have NuGet Package Restore enabled, uncomment the next line 
+##&lt;packages&gt;
+packages/
+
+# Windows Azure Build Output
+csx/
+*.build.csdef
+
+# Windows Store app package directory and files
+AppPackages/
+
+# Others
+sql/
