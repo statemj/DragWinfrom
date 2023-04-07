@@ -29,37 +29,50 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(bingGpt));
+            heightBox = new Label();
             closeFromFn = new Label();
-            label1 = new Label();
+            clickMinimizedBtn = new Label();
             SuspendLayout();
+            // 
+            // heightBox
+            // 
+            heightBox.AutoSize = true;
+            heightBox.Location = new Point(370, 191);
+            heightBox.Name = "heightBox";
+            heightBox.Size = new Size(15, 17);
+            heightBox.TabIndex = 2;
+            heightBox.Text = "0";
             // 
             // closeFromFn
             // 
             closeFromFn.AutoSize = true;
             closeFromFn.BackColor = Color.Transparent;
             closeFromFn.Cursor = Cursors.Hand;
+            closeFromFn.Dock = DockStyle.Right;
             closeFromFn.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             closeFromFn.ForeColor = Color.IndianRed;
-            closeFromFn.Location = new Point(776, 2);
+            closeFromFn.Location = new Point(777, 0);
             closeFromFn.Name = "closeFromFn";
             closeFromFn.Size = new Size(22, 22);
-            closeFromFn.TabIndex = 0;
+            closeFromFn.TabIndex = 5;
             closeFromFn.Text = "×";
             closeFromFn.Click += clickExit;
             // 
-            // label1
+            // clickMinimizedBtn
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Cursor = Cursors.Hand;
-            label1.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.IndianRed;
-            label1.Location = new Point(757, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(15, 17);
-            label1.TabIndex = 1;
-            label1.Text = "━";
-            label1.Click += clickMinimized;
+            clickMinimizedBtn.AutoSize = true;
+            clickMinimizedBtn.BackColor = Color.Transparent;
+            clickMinimizedBtn.Cursor = Cursors.Hand;
+            clickMinimizedBtn.Dock = DockStyle.Right;
+            clickMinimizedBtn.Font = new Font("Microsoft YaHei UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            clickMinimizedBtn.ForeColor = Color.IndianRed;
+            clickMinimizedBtn.Location = new Point(760, 0);
+            clickMinimizedBtn.Name = "clickMinimizedBtn";
+            clickMinimizedBtn.Padding = new Padding(0, 2, 0, 0);
+            clickMinimizedBtn.Size = new Size(17, 22);
+            clickMinimizedBtn.TabIndex = 6;
+            clickMinimizedBtn.Text = "━";
+            clickMinimizedBtn.Click += clickMinimized;
             // 
             // bingGpt
             // 
@@ -67,8 +80,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(799, 450);
-            Controls.Add(label1);
+            Controls.Add(clickMinimizedBtn);
             Controls.Add(closeFromFn);
+            Controls.Add(heightBox);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
@@ -76,13 +90,15 @@
             ShowIcon = false;
             Text = "GptMsg";
             Load += Form1_Load;
+            MouseLeave += bingGpt_MouseLeave;
+            MouseMove += bingGpt_MouseMove;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
+        private Label heightBox;
         private Label closeFromFn;
-        private Label label1;
+        private Label clickMinimizedBtn;
     }
 }
